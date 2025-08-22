@@ -168,3 +168,165 @@ document
   .addEventListener("click", function (e) {
     e.stopPropagation();
   });
+
+
+
+  //  dark and light mode toggle
+
+//   let themeBtn = document.querySelector("#theme-btn");
+
+// themeBtn.onclick = () => {
+//   document.body.classList.toggle("dark-mode");
+
+//   // Change icon sun/moon
+//   if (document.body.classList.contains("dark-mode")) {
+//     themeBtn.classList.remove("fa-moon");
+//     themeBtn.classList.add("fa-sun");
+//   } else {
+//     themeBtn.classList.remove("fa-sun");
+//     themeBtn.classList.add("fa-moon");
+//   }
+
+//   // Save mode in localStorage
+//   localStorage.setItem(
+//     "theme",
+//     document.body.classList.contains("dark-mode") ? "dark" : "light"
+//   );
+// };
+
+// // On page load, check saved theme
+// window.onload = () => {
+//   if (localStorage.getItem("theme") === "dark") {
+//     document.body.classList.add("dark-mode");
+//     themeBtn.classList.remove("fa-moon");
+//     themeBtn.classList.add("fa-sun");
+//   }
+// };
+
+
+// dark and light mode 
+const toggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
+
+// Check saved theme in localStorage
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+  toggleBtn.innerHTML = '<i class="fas fa-sun"></i>'; // Light mode icon
+} else {
+  toggleBtn.innerHTML = '<i class="fas fa-moon"></i>'; // Dark mode icon
+}
+
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  if (body.classList.contains("dark-mode")) {
+    toggleBtn.innerHTML = '<i class="fas fa-sun"></i>'; // Switch to light
+    localStorage.setItem("theme", "dark");
+  } else {
+    toggleBtn.innerHTML = '<i class="fas fa-moon"></i>'; // Switch to dark
+    localStorage.setItem("theme", "light");
+  }
+});
+
+
+
+
+
+
+
+
+
+
+    AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-out-cubic'
+        });
+
+        // Download button click handler
+        document.getElementById('downloadBtn').addEventListener('click', function(e) {
+            // Let the browser handle the download naturally
+            showMessage('Resume download started! 📄', 'success');
+            
+            // Optional: Track download event
+            console.log('Resume download initiated');
+            
+            // Optional: Google Analytics tracking
+            // gtag('event', 'download', {
+            //     'event_category': 'resume',
+            //     'event_label': 'pdf_download'
+            // });
+        });
+
+        // Preview button click handler
+        document.getElementById('previewBtn').addEventListener('click', function(e) {
+            showMessage('Opening resume preview... 👀', 'success');
+        });
+
+        // Function to show status messages
+        function showMessage(message, type) {
+            const statusDiv = document.getElementById('statusMessage');
+            statusDiv.innerHTML = message;
+            statusDiv.className = `status-message ${type}`;
+            statusDiv.style.display = 'block';
+            
+            // Hide message after 3 seconds
+            setTimeout(() => {
+                statusDiv.style.display = 'none';
+            }, 3000);
+        }
+
+        // Optional: Check if file exists (for debugging)
+        function checkFileExists() {
+            fetch('images/resume.pdf', { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('✅ Resume file found');
+                    } else {
+                        console.log('❌ Resume file not found');
+                        showMessage('Resume file not found! Please check the path.', 'error');
+                    }
+                })
+                .catch(error => {
+                    console.log('⚠️ Could not verify file:', error);
+                });
+        }
+
+
+        // Enhanced download with fallback
+        function enhancedDownload() {
+            const link = document.createElement('a');
+            link.href = 'images/Suhail_Resume_Web_Dev.docx';
+            link.download = 'My_Resume.pdf';
+            link.style.display = 'none';
+            
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            showMessage('Download started! 🚀', 'success');
+        }
+
+        // Alternative method if needed
+        function forceDownload() {
+            fetch('images/resume.pdf')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('File not found');
+                    }
+                    return response.blob();
+                })
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'Resume.pdf';
+                    link.click();
+                    window.URL.revokeObjectURL(url);
+                    showMessage('Resume downloaded successfully! ✅', 'success');
+                })
+                .catch(error => {
+                    console.error('Download failed:', error);
+                    showMessage('Download failed! Please try again.', 'error');
+                });
+        }
