@@ -39,8 +39,12 @@
 
     <header class="header">
       <div id="menu-btn" class="fas fa-bars"></div>
+    <button id="theme-toggle" class="theme-btn">
+  🌙 Dark
+</button>
 
-      <a href="#home" class="logo">Portfolio</a>
+
+      <a href="#home" class="logo" >Portfolio</a>
 
       <nav class="navbar">
         <a href="#home" class="active">home</a>
@@ -55,7 +59,7 @@
         <a href="#" class="fab fa-twitter"></a>
         <a href="#" class="fab fa-instagram"></a>
         <a
-          href="https://www.linkedin.com/in/suhail-akhtar-b51175249"
+          href="https://www.linkedin.com/in/suhail--akhtar/"
           class="fab fa-linkedin"
         ></a>
         <a
@@ -126,17 +130,31 @@
         </p>
 
         <div class="bio">
-          <h3 data-aos="zoom-in"><span>name : </span> Suhail Akhtar</h3>
-          <h3 data-aos="zoom-in">
-            <span>email : </span> suhailakhtar689@gmail.com
+          <h3 data-aos="zoom-in" id="dark-mode"><span id="dark-mode">name : </span> Suhail Akhtar</h3>
+          <h3 data-aos="zoom-in"  id="dark-mode">
+            <span  id="dark-mode">email : </span> suhailakhtar689@gmail.com
           </h3>
-          <h3 data-aos="zoom-in"><span>address : </span> noida, india</h3>
-          <h3 data-aos="zoom-in"><span>phone : </span> 8750083134</h3>
+          <h3 data-aos="zoom-in"  id="dark-mode"><span id="dark-mode">address : </span> noida, india</h3>
+          <h3 data-aos="zoom-in"  id="dark-mode"><span  id="dark-mode">phone : </span> 8750083134</h3>
           <!-- <h3 data-aos="zoom-in"><span>age : </span> 21 years</h3> -->
-          <h3 data-aos="zoom-in"><span>experience : </span> 1 Year</h3>
+          <h3 data-aos="zoom-in" id="dark-mode"><span  id="dark-mode">experience : </span> 1 Year</h3>
         </div>
 
-        <a href="resume.pdf" class="btn" data-aos="fade-up">download CV</a>
+        <!-- <a href="images/resume.pdf" class="btn" data-aos="fade-up">download CV</a> -->
+             <!-- Main Download Button -->
+        <a href="images/resume.pdf" 
+           class="btn" 
+           data-aos="fade-up" 
+           data-aos-delay="200"
+           download="images/Suhail_Resume_Web_Dev.docx"
+           id="downloadBtn">
+            <span class="download-icon">📥</span>
+            Download CV
+        </a>
+
+    
+
+        <div id="statusMessage" class="status-message"></div>
         <!-- <a class="btn line-btn-dark btn-icon btn-radius" href="Edureka - Internship Certificate.pdf" title=""<i class="fa fa-download" download></i> Download Resume</a> -->
       </div>
 
@@ -454,63 +472,66 @@
           <div class="progress-column">
             <h2 class="skills-heading">Design Skills</h2>
 
-            <div class="bar" data-aos="fade-left">
-              <h3><span>Photoshot</span> <span class="percent">90%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="95"></div>
+            <div class="skill-box" data-aos="fade-left">
+              <i class="fa-solid fa-paintbrush skill-icon"></i>
+              <div class="skill-details">
+                <h4>Photoshop</h4>
+                <!-- <p class="level">Expert</p> -->
               </div>
             </div>
 
-            <div class="bar" data-aos="fade-left">
-              <h3><span>FIGMA</span> <span class="percent">95%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="95"></div>
+            <div class="skill-box" data-aos="fade-left">
+              <i class="fa-brands fa-figma skill-icon"></i>
+              <div class="skill-details">
+                <h4>Figma</h4>
+                <!-- <p class="level">Expert</p> -->
               </div>
             </div>
 
-            <div class="bar" data-aos="fade-left">
-              <h3><span>ADOBE XD</span> <span class="percent">60%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="95"></div>
+            <div class="skill-box" data-aos="fade-left">
+              <i class="fa-solid fa-pen-ruler skill-icon"></i>
+              <div class="skill-details">
+                <h4>Adobe XD</h4>
+                <!-- <p class="level">Intermediate</p> -->
               </div>
             </div>
 
-            <div class="bar" data-aos="fade-left">
-              <h3>
-                <span>ADOBE ILLUSTRATOR</span> <span class="percent">85%</span>
-              </h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="95"></div>
+            <div class="skill-box" data-aos="fade-left">
+              <i class="fa-solid fa-vector-square skill-icon"></i>
+              <div class="skill-details">
+                <h4>Illustrator</h4>
+                <!-- <p class="level">Advanced</p> -->
               </div>
             </div>
 
-            <div class="bar" data-aos="fade-left">
-              <h3><span>Sketch</span> <span class="percent">70%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="95"></div>
+            <div class="skill-box" data-aos="fade-left">
+              <i class="fa-brands fa-sketch skill-icon"></i>
+              <div class="skill-details">
+                <h4>Sketch</h4>
+                <!-- <p class="level">Advanced</p> -->
               </div>
             </div>
 
-            <div class="bar" data-aos="fade-left">
-              <h3><span>Canva</span> <span class="percent">60%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="95"></div>
+            <div class="skill-box" data-aos="fade-left">
+              <i class="fa-solid fa-palette skill-icon"></i>
+              <div class="skill-details">
+                <h4>Canva</h4>
+                <!-- <p class="level">Advanced</p> -->
               </div>
             </div>
 
-            <div class="bar" data-aos="fade-left">
-              <h3><span>InVision</span> <span class="percent">70%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="95"></div>
+            <div class="skill-box" data-aos="fade-left">
+              <i class="fa-solid fa-cubes skill-icon"></i>
+              <div class="skill-details">
+                <h4>InVision</h4>
+                <!-- <p class="level">Advanced</p> -->
               </div>
             </div>
-
-            <div class="bar" data-aos="fade-left">
-              <h3>
-                <span>Adobe Photoshop</span> <span class="percent">95%</span>
-              </h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="95"></div>
+            <div class="skill-box" data-aos="fade-left">
+              <i class="fa-solid fa-wand-magic-sparkles skill-icon"></i>
+              <div class="skill-details">
+                <h4>Adobe Photoshop</h4>
+                <!-- <p class="level">Advanced</p> -->
               </div>
             </div>
           </div>
@@ -519,73 +540,101 @@
           <div class="progress-column">
             <h2 class="skills-heading">Development Skills</h2>
 
-            <div class="bar" data-aos="fade-left">
-              <h3><span>HTML</span> <span class="percent">95%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="95"></div>
+            <div class="skill-box" data-aos="fade-right">
+              <i class="fa-brands fa-html5 skill-icon"></i>
+              <div class="skill-details">
+                <h4>HTML</h4>
+                <!-- <p class="level">Expert</p> -->
               </div>
             </div>
 
-            <div class="bar" data-aos="fade-left">
-              <h3><span>CSS</span> <span class="percent">85%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="85"></div>
+            <div class="skill-box" data-aos="fade-right">
+              <i class="fa-brands fa-css3-alt skill-icon"></i>
+              <div class="skill-details">
+                <h4>CSS</h4>
+                <!-- <p class="level">Advanced</p> -->
               </div>
             </div>
 
-            <div class="bar" data-aos="fade-left">
-              <h3><span>Bootstrap</span> <span class="percent">80%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="80"></div>
+            <div class="skill-box" data-aos="fade-right">
+              <img
+                src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+                alt="Tailwind CSS"
+                class="skill-icon"
+                style="width: 30px; height: 30px"
+              />
+              <div class="skill-details">
+                <h4>Tailwind CSS</h4>
+                <!-- <p class="level">Advanced</p> -->
               </div>
             </div>
 
-            <div class="bar" data-aos="fade-left">
-              <h3><span>JavaScript</span> <span class="percent">90%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="90"></div>
+            <div class="skill-box" data-aos="fade-right">
+              <i class="fa-brands fa-bootstrap skill-icon"></i>
+              <div class="skill-details">
+                <h4>Bootstrap</h4>
+                <!-- <p class="level">Advanced</p> -->
               </div>
             </div>
 
-            <div class="bar" data-aos="fade-left">
-              <h3><span>Ajax</span> <span class="percent">90%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="90"></div>
+            <div class="skill-box" data-aos="fade-right">
+              <i class="fa-brands fa-js skill-icon"></i>
+              <div class="skill-details">
+                <h4>JavaScript</h4>
+                <!-- <p class="level">Expert</p> -->
               </div>
             </div>
 
-            <div class="bar" data-aos="fade-left">
-              <h3><span>Jquery</span> <span class="percent">90%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="90"></div>
+            <div class="skill-box" data-aos="fade-right">
+              <i class="fa-solid fa-arrows-rotate skill-icon"></i>
+              <div class="skill-details">
+                <h4>Ajax</h4>
+                <!-- <p class="level">Expert</p> -->
               </div>
             </div>
 
-            <div class="bar" data-aos="fade-right">
-              <h3><span>PHP</span> <span class="percent">85%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="85"></div>
+            <div class="skill-box" data-aos="fade-left">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg"
+                alt="jQuery"
+                class="skill-icon"
+                style="width: 30px; height: 30px"
+              />
+              <div class="skill-details">
+                <h4>jQuery</h4>
+                <!-- <p class="level">Advanced</p> -->
               </div>
             </div>
 
-            <div class="bar" data-aos="fade-right">
-              <h3><span>Laravel</span> <span class="percent">85%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="85"></div>
+            <div class="skill-box" data-aos="fade-right">
+              <i class="fa-solid fa-code skill-icon"></i>
+              <div class="skill-details">
+                <h4>PHP</h4>
+                <!-- <p class="level">Advanced</p> -->
               </div>
             </div>
 
-            <div class="bar" data-aos="fade-right">
-              <h3><span>Codeigniter</span> <span class="percent">85%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="85"></div>
+            <div class="skill-box" data-aos="fade-right">
+              <i class="fa-brands fa-laravel skill-icon"></i>
+              <div class="skill-details">
+                <h4>Laravel</h4>
+                <!-- <p class="level">Advanced</p> -->
               </div>
             </div>
 
-            <div class="bar" data-aos="fade-right">
-              <h3><span>MySQL</span> <span class="percent">80%</span></h3>
-              <div class="progress-track">
-                <div class="progress-fill" data-percent="80"></div>
+            <div class="skill-box" data-aos="fade-right">
+              <i class="fa-solid fa-fire skill-icon"></i>
+              <div class="skill-details">
+                <h4>Codeigniter</h4>
+                <!-- <p class="level">Advanced</p> -->
+              </div>
+            </div>
+
+            <div class="skill-box" data-aos="fade-right">
+              <i class="fa-solid fa-database skill-icon"></i>
+              <div class="skill-details">
+                <h4>MySQL</h4>
+                <!-- <p class="level">Advanced</p> -->
               </div>
             </div>
           </div>
@@ -731,51 +780,101 @@
       </div>
     </section> -->
 
+    <section class="contact" id="contact">
+      <h1 class="heading" data-aos="fade-up"><span>contact me</span></h1>
 
-<section class="contact" id="contact">
-  <h1 class="heading" data-aos="fade-up"><span>contact me</span></h1>
+      <div class="contact-container">
+        <!-- Left Side -->
+        <div class="contact-left" data-aos="fade-right">
+          <img
+            src="images/contact1.png"
+            alt="Contact Image"
+            class="contact-img"
+          />
+          <h2 class="get">Get In Touch</h2>
+          <p>
+            I am available for freelance work. Connect with me via and call in
+            to my account.
+          </p>
+          <p>
+            <strong>Phone:</strong>
+            <a href="tel:+918750083134">+91 8750083134</a>
+          </p>
+          <p>
+            <strong style="text-color: white;">Email:</strong>
+            <a href="mailto:suhailakhtar689@gmail.com"
+              >suhailakhtar689@gmail.com</a
+            >
+          </p>
 
-  <div class="contact-container">
-    <!-- Left Side -->
-    <div class="contact-left" data-aos="fade-right">
-      <img src="images/contact1.png" alt="Contact Image" class="contact-img" />
-      <h2 class="get">Get In Touch</h2>
-      <p>I am available for freelance work. Connect with me via and call in to my account.</p>
-      <p><strong>Phone:</strong> <a href="tel:+918750083134">+91 8750083134</a></p>
-      <p><strong>Email:</strong> <a href="mailto:suhailakhtar689@gmail.com">suhailakhtar689@gmail.com</a></p>
-
-      <h3 class="find">Find with me</h3>
-      <div class="social-icons" id="icons">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-      </div>
-    </div>
-
-    <!-- Right Side -->
-    <div class="contact-right" data-aos="fade-left">
-      <form action="conn.php" method="post">
-        <div class="flex">
-          <input type="text" placeholder="enter your name" class="box" required />
-          <input type="email" placeholder="enter your email" class="box" required />
+          <h3 class="find">Find with me</h3>
+          <div class="social-icons" id="icons">
+            <a href="https://github.com/suhailakhtar689/cmd.git"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/suhail--akhtar/"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
         </div>
-        <input type="number" min="0" name="number" placeholder="enter your number" class="box" required />
-        <textarea name="message" class="box" required placeholder="enter your message" cols="30" rows="10"></textarea>
-        <input type="submit" value="send message" name="send" class="btn" />
-      </form>
-    </div>
-  </div>
-</section>
 
-
+        <!-- Right Side -->
+        <div class="contact-right" data-aos="fade-left">
+          <form action="conn.php" method="post">
+            <div class="flex">
+              <input
+                type="text"
+                name="name"
+                placeholder="enter your name"
+                class="box"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="enter your email"
+                class="box"
+                required
+              />
+            </div>
+            <input
+              type="number"
+              min="0"
+              name="number"
+              placeholder="enter your number"
+              class="box"
+              required
+            />
+            <textarea
+              name="message"
+              class="box"
+              required
+              placeholder="enter your message"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <input type="submit" value="send message" name="send" class="btn" />
+          </form>
+        </div>
+      </div>
+    </section>
 
     <!-- contact section ends -->
+    <div
+      class="credit"
+      style="display: flex; align-items: center; justify-content: center"
+    >
+      <img
+        src="images/logo-footer.png"
+        alt="logo1"
+        style="height: 90px; width: 90px"
+      />
 
-    <div class="credit">
-      &copy; copyright @
-      <?php echo date('Y'); ?>
-      by <span>mr. suhail akhtar</span>
+      <span>
+        <span style="color: white"
+          >© copyright @
+          <?php echo date('Y'); ?>
+          by <span> mr. suhail akhtar </span>
+        </span>
+      </span>
     </div>
 
     <!-- custom js file link  -->
@@ -798,5 +897,3 @@
     ></script> -->
   </body>
 </html>
-
-
