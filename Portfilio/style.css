@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 
-:root {
+:root { 
   --yellow: #ffcc0d;
   --black: #000;
   --white: #fff;
@@ -1465,9 +1465,9 @@ body {
 /* 📲 Tablets */
 @media (min-width: 601px) and (max-width: 1024px) {
   .theme-btn {
-    top: 15px;
+    top: 4px;
     right: 15px;
-    width: 35px;
+    width: 42px;
     height: 42px;
     font-size: 18px;
   }
@@ -1591,5 +1591,6 @@ body.dark-mode .skill-box {
   background: #222; 
   color: #fff;
 }
+
 
 
