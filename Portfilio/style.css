@@ -1451,6 +1451,27 @@ body {
   color: #fff;
 }
 
+/* 📱 Mobile screens */
+@media (max-width: 600px) {
+  .theme-btn {
+    top: 4px;
+        right: 10px;
+        width: 43px;
+        height: 43px;
+        font-size: 27px;
+  }
+}
+
+/* 📲 Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .theme-btn {
+    top: 15px;
+    right: 15px;
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+}
 /* ================= DARK MODE SUPPORT ================= */
 
 /* Text color */
@@ -1570,4 +1591,3 @@ body.dark-mode .skill-box {
   background: #222; 
   color: #fff;
 }
-
