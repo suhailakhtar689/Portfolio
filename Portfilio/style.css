@@ -1455,10 +1455,10 @@ body {
 @media (max-width: 600px) {
   .theme-btn {
     top: 4px;
-        right: 10px;
-        width: 43px;
-        height: 43px;
-        font-size: 27px;
+    right: 10px;
+    width: 38px;
+    height: 45px;
+    font-size: 25px;
   }
 }
 
@@ -1591,4 +1591,5 @@ body.dark-mode .skill-box {
   background: #222; 
   color: #fff;
 }
+
 
