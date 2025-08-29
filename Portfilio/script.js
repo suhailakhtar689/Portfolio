@@ -67,59 +67,73 @@ const projectData = {
   },
   4: {
     title: "Merino eMERaldz Prime Dynamic Application Page",
-    image:
-      "images/m-prime.webp",
+    image: "images/m-prime.webp",
     description:
       "Developed a brand-new App page from scratch as per client requirements. Fetched dynamic content from MySQL database using PHP to populate the new page. Implemented a modular code structure for reusability and maintainability. The new page is now part of the live Merino Prime App, improving user engagement and content visibility. Successfully met client expectations in both design and performance.",
     link: "https://play.google.com/store/apps/details?id=com.merino.merinoprime&pcampaignid=web_share",
   },
   5: {
     title: "Grow Mark a Modern Real Estate Solution",
-    image:
-      "images/screenshot-3.png",
+    image: "images/screenshot-3.png",
     description:
-"Grow Mark is a modern, dynamic real estate landing page developed to effectively showcase property listings and related services. The design focuses on responsiveness, ensuring smooth performance across all devices, and offers a secure login system for agents and clients. With a sleek layout and intuitive navigation, the platform enhances user experience for both buyers and sellers in the real estate market.",
+      "Grow Mark is a modern, dynamic real estate landing page developed to effectively showcase property listings and related services. The design focuses on responsiveness, ensuring smooth performance across all devices, and offers a secure login system for agents and clients. With a sleek layout and intuitive navigation, the platform enhances user experience for both buyers and sellers in the real estate market.",
     link: "#",
   },
   6: {
     title: "E-shoper Online Shopping Platform with Razorpay Integration",
-    image:
-      "images/screenshoot-4.png",
+    image: "images/screenshoot-4.png",
     description:
-               "Developed a robust and dynamic e-commerce platform, eShoper, leveraging the power of Laravel, tailored for seamless online shopping experiences. The platform features a user-friendly interface, allowing customers to browse and purchase products effortlessly. Integrated Razorpay for secure payment processing, ensuring safe transactions. The design is fully responsive, providing an optimal shopping experience across all devices. eShoper is built with scalability in mind, ready to accommodate future growth and additional features.",
+      "Developed a robust and dynamic e-commerce platform, eShoper, leveraging the power of Laravel, tailored for seamless online shopping experiences. The platform features a user-friendly interface, allowing customers to browse and purchase products effortlessly. Integrated Razorpay for secure payment processing, ensuring safe transactions. The design is fully responsive, providing an optimal shopping experience across all devices. eShoper is built with scalability in mind, ready to accommodate future growth and additional features.",
     link: "#",
   },
   7: {
     title: "Personal Financial Budget Analysis",
-    image:
-      "images/Screenshot-5.png",
+    image: "images/Screenshot-5.png",
     description:
       "Designed a comprehensive financial tracking tool to help individuals manage their income, expenses, and savings goals.Income & Expense Tracking: Log and categorize transactions with ease. Budget Planning: Set monthly or annual budgets and monitor progress.Spending Analysis: Generate detailed reports and visual graphs to analyze spending patterns across categories like groceries, utilities, and entertainment.",
     link: "#",
   },
   8: {
     title: "Hotel & Resort Website landing design & Services",
-    image:
-      "images/Screenshot-1.png",
+    image: "images/Screenshot-1.png",
     description:
-"Crafted an elegant and user-friendly landing page for a luxury Hotel & Resort, ensuring a premium look and seamless browsing experience.Responsive Design: Optimized for flawless viewing on desktop, tablet, and mobile devices.Dynamic Services Section: Highlighted key offerings such as room categories, spa treatments, fine dining, and booking facilities.Visual Appeal: Used high-quality imagery and refined typography to reflect the brand’s upscale identity.",
+      "Crafted an elegant and user-friendly landing page for a luxury Hotel & Resort, ensuring a premium look and seamless browsing experience.Responsive Design: Optimized for flawless viewing on desktop, tablet, and mobile devices.Dynamic Services Section: Highlighted key offerings such as room categories, spa treatments, fine dining, and booking facilities.Visual Appeal: Used high-quality imagery and refined typography to reflect the brand’s upscale identity.",
     link: "#",
   },
   9: {
     title: "Dentist Website Landing Design",
-    image:
-      "images/screenshoot.png",
+    image: "images/screenshoot.png",
     description:
-"Designed a modern, responsive, and user-friendly landing page tailored for dental clinics.Goal: Create a layout that conveys trust, professionalism, and a welcoming environment to attract new patients while offering convenience for existing ones.Responsive Design: Optimized for seamless browsing across desktop, tablet, and mobile devices.Visual Focus: Clean, calm color palette and high-quality imagery to enhance credibility and comfort.",
+      "Designed a modern, responsive, and user-friendly landing page tailored for dental clinics.Goal: Create a layout that conveys trust, professionalism, and a welcoming environment to attract new patients while offering convenience for existing ones.Responsive Design: Optimized for seamless browsing across desktop, tablet, and mobile devices.Visual Focus: Clean, calm color palette and high-quality imagery to enhance credibility and comfort.",
     link: "#",
   },
   10: {
     title: "Tour & Travel Website Landing Design & Services",
-    image:
-      "images/Screenshot-2.png",
+    image: "images/Screenshot-2.png",
     description:
-"Designed an engaging, user-focused landing page for a tour and travel agency, crafted to inspire wanderlust while simplifying trip planning.Goal: Combine aesthetic appeal with functional design to attract travelers and increase conversions.Responsive Design: Optimized for seamless browsing on desktop, tablet, and mobile devices.Key Highlights: High-quality travel imagery, interactive trip options, and clear booking CTAs.",
+      "Designed an engaging, user-focused landing page for a tour and travel agency, crafted to inspire wanderlust while simplifying trip planning.Goal: Combine aesthetic appeal with functional design to attract travelers and increase conversions.Responsive Design: Optimized for seamless browsing on desktop, tablet, and mobile devices.Key Highlights: High-quality travel imagery, interactive trip options, and clear booking CTAs.",
     link: "#",
+  },
+    11: {
+    title: "Ship & Loaves – Loyalty Program",
+    image: "images/Screenshot-2.png",
+    description:
+      "Developed a comprehensive loyalty program for Ship & Loaves, aimed at enhancing customer retention and engagement. Key Features: Points-based rewards system, personalized offers, and seamless integration with existing platforms. User Experience: Designed intuitive interfaces for both customers and administrators, ensuring ease of use and accessibility.Automated points tracking & redemption system.Real-time calculation of points based on bill amount and time slot.Admin dashboard for managing offers, tracking customers, and generating reports.Integrated email/SMS notifications for registration, earned points, and redemption.",
+    link: "https://sipandloaves.vritto.com/SALC85TD/controlpanel/",
+  },
+   12: {
+    title: "Baba Pota – Loyalty Program",
+    image: "images/Screenshot-2.png",
+    description:
+"Onboarding Registration Link for new customers with instant bonus points on signup. Points Allocation System based on bill value and time slots (Normal Hours & Happy Hours). Redemption Rules allowing customers to redeem points on eligible bills.Integrated email/SMS notifications for registration, earned points, and redemption. Admin Dashboard for managing offers, tracking customer activity, and generating reports.",
+    link: "http://babapota.vritto.com/BP3HVOGY/controlpanel",
+  },
+     13: {
+    title: "Sandoz – Loyalty Program",
+    image: "images/Screenshot-2.png",
+    description: 
+        "Built a loyalty management system for Sandoz to increase customer retention and engagement. The program was customized to client requirements, offering seamless onboarding, reward points allocation, and redemption processes.",
+    link: "https://sandoz.vritto.com/SRUFAV9D/controlpanel/",
   },
 };
 
@@ -169,42 +183,7 @@ document
     e.stopPropagation();
   });
 
-
-
-  //  dark and light mode toggle
-
-//   let themeBtn = document.querySelector("#theme-btn");
-
-// themeBtn.onclick = () => {
-//   document.body.classList.toggle("dark-mode");
-
-//   // Change icon sun/moon
-//   if (document.body.classList.contains("dark-mode")) {
-//     themeBtn.classList.remove("fa-moon");
-//     themeBtn.classList.add("fa-sun");
-//   } else {
-//     themeBtn.classList.remove("fa-sun");
-//     themeBtn.classList.add("fa-moon");
-//   }
-
-//   // Save mode in localStorage
-//   localStorage.setItem(
-//     "theme",
-//     document.body.classList.contains("dark-mode") ? "dark" : "light"
-//   );
-// };
-
-// // On page load, check saved theme
-// window.onload = () => {
-//   if (localStorage.getItem("theme") === "dark") {
-//     document.body.classList.add("dark-mode");
-//     themeBtn.classList.remove("fa-moon");
-//     themeBtn.classList.add("fa-sun");
-//   }
-// };
-
-
-// dark and light mode 
+// dark and light mode
 const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
 
@@ -228,107 +207,89 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
+AOS.init({
+  duration: 1000,
+  once: true,
+  easing: "ease-out-cubic",
+});
 
+// Download button click handler
+document.getElementById("downloadBtn").addEventListener("click", function (e) {
+  // Let the browser handle the download naturally
+  showMessage("Resume download started! 📄", "success");
 
+  // Optional: Track download event
+  console.log("Resume download initiated");
+});
 
+// Preview button click handler
+document.getElementById("previewBtn").addEventListener("click", function (e) {
+  showMessage("Opening resume preview... 👀", "success");
+});
 
+// Function to show status messages
+function showMessage(message, type) {
+  const statusDiv = document.getElementById("statusMessage");
+  statusDiv.innerHTML = message;
+  statusDiv.className = `status-message ${type}`;
+  statusDiv.style.display = "block";
 
+  // Hide message after 3 seconds
+  setTimeout(() => {
+    statusDiv.style.display = "none";
+  }, 3000);
+}
 
+// Optional: Check if file exists (for debugging)
+function checkFileExists() {
+  fetch("images/resume.pdf", { method: "HEAD" })
+    .then((response) => {
+      if (response.ok) {
+        console.log("✅ Resume file found");
+      } else {
+        console.log("❌ Resume file not found");
+        showMessage("Resume file not found! Please check the path.", "error");
+      }
+    })
+    .catch((error) => {
+      console.log("⚠️ Could not verify file:", error);
+    });
+}
 
+// Enhanced download with fallback
+function enhancedDownload() {
+  const link = document.createElement("a");
+  link.href = "images/Suhail_Resume_Web_Dev.docx";
+  link.download = "My_Resume.pdf";
+  link.style.display = "none";
 
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 
-    AOS.init({
-            duration: 1000,
-            once: true,
-            easing: 'ease-out-cubic'
-        });
+  showMessage("Download started! 🚀", "success");
+}
 
-        // Download button click handler
-        document.getElementById('downloadBtn').addEventListener('click', function(e) {
-            // Let the browser handle the download naturally
-            showMessage('Resume download started! 📄', 'success');
-            
-            // Optional: Track download event
-            console.log('Resume download initiated');
-            
-            // Optional: Google Analytics tracking
-            // gtag('event', 'download', {
-            //     'event_category': 'resume',
-            //     'event_label': 'pdf_download'
-            // });
-        });
-
-        // Preview button click handler
-        document.getElementById('previewBtn').addEventListener('click', function(e) {
-            showMessage('Opening resume preview... 👀', 'success');
-        });
-
-        // Function to show status messages
-        function showMessage(message, type) {
-            const statusDiv = document.getElementById('statusMessage');
-            statusDiv.innerHTML = message;
-            statusDiv.className = `status-message ${type}`;
-            statusDiv.style.display = 'block';
-            
-            // Hide message after 3 seconds
-            setTimeout(() => {
-                statusDiv.style.display = 'none';
-            }, 3000);
-        }
-
-        // Optional: Check if file exists (for debugging)
-        function checkFileExists() {
-            fetch('images/resume.pdf', { method: 'HEAD' })
-                .then(response => {
-                    if (response.ok) {
-                        console.log('✅ Resume file found');
-                    } else {
-                        console.log('❌ Resume file not found');
-                        showMessage('Resume file not found! Please check the path.', 'error');
-                    }
-                })
-                .catch(error => {
-                    console.log('⚠️ Could not verify file:', error);
-                });
-        }
-
-
-        // Enhanced download with fallback
-        function enhancedDownload() {
-            const link = document.createElement('a');
-            link.href = 'images/Suhail_Resume_Web_Dev.docx';
-            link.download = 'My_Resume.pdf';
-            link.style.display = 'none';
-            
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            showMessage('Download started! 🚀', 'success');
-        }
-
-        // Alternative method if needed
-        function forceDownload() {
-            fetch('images/resume.pdf')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('File not found');
-                    }
-                    return response.blob();
-                })
-                .then(blob => {
-                    const url = window.URL.createObjectURL(blob);
-                    const link = document.createElement('a');
-                    link.href = url;
-                    link.download = 'Resume.pdf';
-                    link.click();
-                    window.URL.revokeObjectURL(url);
-                    showMessage('Resume downloaded successfully! ✅', 'success');
-                })
-                .catch(error => {
-                    console.error('Download failed:', error);
-                    showMessage('Download failed! Please try again.', 'error');
-                });
-        }
-
-
+// Alternative method if needed
+function forceDownload() {
+  fetch("images/resume.pdf")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("File not found");
+      }
+      return response.blob();
+    })
+    .then((blob) => {
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Resume.pdf";
+      link.click();
+      window.URL.revokeObjectURL(url);
+      showMessage("Resume downloaded successfully! ✅", "success");
+    })
+    .catch((error) => {
+      console.error("Download failed:", error);
+      showMessage("Download failed! Please try again.", "error");
+    });
+}
