@@ -63,7 +63,7 @@ const projectData = {
     image: "images/captain.png",
     description:
       "Built and improved the admin control panel for managing page content, sections, and dynamic data. Delivered a modern, professional UI aligned with Captain Steel's branding. Streamlined internal management with a custom backoffice solution. Enabled seamless real-time data updates through API integration. Integrated RESTful APIs to sync backend data with the website and admin panel. Worked on secure and efficient data handling between the database and front-facing interfaces.",
-    link: "https://captainsteel.vritto.com/",
+    link: "https://captainsteel.vritto.com/CSRHS6BP/page/",
   },
   4: {
     title: "Merino eMERaldz Prime Dynamic Application Page",
@@ -330,3 +330,4 @@ toggleBtn.addEventListener("click", () => {
                     showMessage('Download failed! Please try again.', 'error');
                 });
         }
+
