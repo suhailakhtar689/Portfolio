@@ -123,7 +123,7 @@ const projectData = {
   },
    12: {
     title: "Baba Pota – Loyalty Program",
-    image: "images/Screenshot-2.png",
+    image: "images/baba_pota.jpg",
     description:
 "Onboarding Registration Link for new customers with instant bonus points on signup. Points Allocation System based on bill value and time slots (Normal Hours & Happy Hours). Redemption Rules allowing customers to redeem points on eligible bills.Integrated email/SMS notifications for registration, earned points, and redemption. Admin Dashboard for managing offers, tracking customer activity, and generating reports.",
     link: "http://babapota.vritto.com/BP3HVOGY/controlpanel",
@@ -293,4 +293,5 @@ function forceDownload() {
       showMessage("Download failed! Please try again.", "error");
     });
 }
+
 
