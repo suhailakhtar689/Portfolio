@@ -112,7 +112,7 @@ const projectData = {
     image: "images/Screenshot-2.png",
     description:
       "Designed an engaging, user-focused landing page for a tour and travel agency, crafted to inspire wanderlust while simplifying trip planning.Goal: Combine aesthetic appeal with functional design to attract travelers and increase conversions.Responsive Design: Optimized for seamless browsing on desktop, tablet, and mobile devices.Key Highlights: High-quality travel imagery, interactive trip options, and clear booking CTAs.",
-    link: "#",
+    link: "https://tour-travel-xi-ten.vercel.app/",
   },
     11: {
     title: "Ship & Loaves – Loyalty Program",
@@ -293,3 +293,4 @@ function forceDownload() {
       showMessage("Download failed! Please try again.", "error");
     });
 }
+
