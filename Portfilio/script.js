@@ -130,7 +130,7 @@ const projectData = {
   },
      13: {
     title: "Sandoz – Loyalty Program",
-    image: "images/Screenshot-2.png",
+    image: "images/sandoz.jpg",
     description: 
         "Built a loyalty management system for Sandoz to increase customer retention and engagement. The program was customized to client requirements, offering seamless onboarding, reward points allocation, and redemption processes.",
     link: "https://sandoz.vritto.com/SRUFAV9D/controlpanel/",
@@ -293,5 +293,6 @@ function forceDownload() {
       showMessage("Download failed! Please try again.", "error");
     });
 }
+
 
 
