@@ -135,6 +135,15 @@ const projectData = {
         "Built a loyalty management system for Sandoz to increase customer retention and engagement. The program was customized to client requirements, offering seamless onboarding, reward points allocation, and redemption processes.",
     link: "https://sandoz.vritto.com/SRUFAV9D/controlpanel/",
   },
+
+    14: {
+    title: "Kohler Gracious living Club – A Complete Loyalty Program Solution",
+    image: "images/kglc_pic.png",
+    description:
+      "Developed and rebuilt a comprehensive loyalty program website for the Kohler Gracious living Club. This project involved transitioning the existing website to a robust CMS-based platform for seamless content management. To power the core loyalty functionalities—such as user points and rewards—we successfully integrated a powerful API. Additionally, we designed and developed attractive, customized HTML email templates to keep users informed and engaged. The project successfully delivered a fully functional and manageable digital solution that enhanced user engagement and brand loyalty.",
+    link: "https://sa.kohlergraciouslivingclub.com/KGSA5MF1/page/",
+  },
+  
 };
 
 function openModal(projectId) {
@@ -293,6 +302,7 @@ function forceDownload() {
       showMessage("Download failed! Please try again.", "error");
     });
 }
+
 
 
 
