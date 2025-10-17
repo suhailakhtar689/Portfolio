@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 
-:root { 
+:root {
   --yellow: #ffcc0d;
   --black: #000;
   --white: #fff;
@@ -562,47 +562,52 @@ section {
   display: grid;
   place-items: center;
 }
-
-.wrapper .dynamic-txt {
-  margin: 0;
-  height: 90px;
-  line-height: 80px;
+/* Wrapper */
+.wrapper {
+  position: relative;
+  height: 120px;
   overflow: hidden;
-  padding-left: 15px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.dynamic-txt li {
+/* UL */
+.dynamic-txt {
   list-style: none;
-  color: hsl(78.8, 90.2%, 64.1%);
-  font-size: 60px;
-  font-weight: 500;
+  margin: 0;
+  padding: 0;
   position: relative;
-  display: inline-block;
-  top: 0;
-  /* animation: slide 9s steps(2) infinite; */
-  animation: slide 12s steps(3) infinite;
+  width: 100%; /* full width */
+  height: 120px;
 }
 
-@keyframes slide {
-  100% {
-    top: -360px;
-  }
-}
-.dynamic-txt li span {
-  position: relative;
-  /* margin: 5px 0; */
-  line-height: 50px;
-}
-
-.dynamic-txt li span::after {
-  content: "";
+/* LI */
+.dynamic-txt li {
   position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #fff;
-  border-left: 2px solid hsl(78.8, 90.2%, 64.1%);
-  animation: typing 4s steps(10) infinite;
+  width: 100%; /* ensures full width */
+  text-align: center; /* text centered horizontally */
+  font-size: clamp(30px, 5vw, 60px); /* responsive font */
+  font-weight: 700;
+  color: hsl(78.8, 90.2%, 64.1%);
+  opacity: 0;
+  transform: translateY(-50px); /* start above */
+  animation: slideDown 9s infinite;
+}
+
+/* Delay for each line */
+.dynamic-txt li:nth-child(1) { animation-delay: 0s; }
+.dynamic-txt li:nth-child(2) { animation-delay: 3s; }
+.dynamic-txt li:nth-child(3) { animation-delay: 6s; }
+
+/* Slide Down + Fade Animation */
+@keyframes slideDown {
+  0%   { opacity: 0; transform: translateY(-50px); }
+  10%  { opacity: 1; transform: translateY(0); }
+  30%  { opacity: 1; transform: translateY(0); }
+  40%  { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 0; transform: translateY(50px); }
 }
 
 @keyframes typing {
@@ -1418,14 +1423,12 @@ textarea {
   color: gray;
 }
 
-
 /* Default Light Mode */
 body {
   background: #fff;
-  color: #111;  
+  color: #111;
   transition: background 0.3s, color 0.3s;
 }
-
 
 /* Dark/Light Toggle Button */
 .theme-btn {
@@ -1455,14 +1458,11 @@ body {
 /* 📱 Mobile screens */
 @media (max-width: 600px) {
   .theme-btn {
-    top:4px; 
-    right: 10px; 
-    height: 4.5rem;
-    line-height: 4.5rem;
-    width: 5rem;
-    font-size: 2.5rem;
-
-    
+    top: 3px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
   }
 }
 
@@ -1483,8 +1483,8 @@ body.dark-mode {
   background-color: #111;
   color: #fff;
 }
-#dark-mode{
-  color: #000
+#dark-mode {
+  color: #000;
 }
 
 /* ✅ h1 ke andar span ka color white */
@@ -1497,19 +1497,17 @@ body.dark-mode .heading span {
 body.dark-mode .btn,
 body.dark-mode input[type="submit"].btn {
   color: #fff !important;
-  background-color: transparent; 
-  border-color: #fff; 
+  background-color: transparent;
+  border-color: #fff;
 }
 
 /* Hover effect */
 body.dark-mode .btn:hover,
 body.dark-mode input[type="submit"].btn:hover {
-  color: #000 !important; 
-  background-color: #fff; 
+  color: #000 !important;
+  background-color: #fff;
   border-color: #fff;
 }
-
-
 
 /* Headings, paragraphs, spans, links */
 body.dark-mode h1,
@@ -1531,7 +1529,7 @@ body.dark-mode .icon,
 body.dark-mode .services .box-container .box i,
 body.dark-mode .header .follow a i,
 body.dark-mode .contact .box-container .box i {
-  color: #fff !important; 
+  color: #fff !important;
   transition: color 0.3s;
 }
 
@@ -1541,9 +1539,8 @@ body.dark-mode .icon:hover,
 body.dark-mode .services .box-container .box:hover i,
 body.dark-mode .header .follow a:hover i,
 body.dark-mode .contact .box-container .box:hover i {
-  color: var(--yellow) !important; 
+  color: var(--yellow) !important;
 }
-
 
 body.dark-mode .skill-details h4,
 body.dark-mode .skill-details p {
@@ -1563,10 +1560,9 @@ body.dark-mode .logo {
   color: #000 !important;
 }
 
-
 /* 🌞 Light Mode (default) */
 .follow a {
-  color: #111;  
+  color: #111;
   font-size: 20px;
   margin: 0 8px;
   transition: 0.3s;
@@ -1574,12 +1570,12 @@ body.dark-mode .logo {
 
 /* Hover effect */
 .follow a:hover {
-  color: var(--yellow); 
+  color: var(--yellow);
 }
 
 /* 🌙 Dark Mode */
 body.dark-mode .follow a {
-  color: #000;  
+  color: #000;
 }
 
 /* Hover effect (dark mode bhi same) */
@@ -1588,16 +1584,13 @@ body.dark-mode .follow a:hover {
 }
 
 body.dark-mode .navbar a {
-  color: #000;  
+  color: #000;
 }
 
 body.dark-mode .skill-box {
-  background: #222; 
+  background: #222;
   color: #fff;
 }
-
-
-
 
 
 
