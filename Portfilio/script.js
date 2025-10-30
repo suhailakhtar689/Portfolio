@@ -98,7 +98,7 @@ const projectData = {
     image: "images/Screenshot-1.png",
     description:
       "Crafted an elegant and user-friendly landing page for a luxury Hotel & Resort, ensuring a premium look and seamless browsing experience.Responsive Design: Optimized for flawless viewing on desktop, tablet, and mobile devices.Dynamic Services Section: Highlighted key offerings such as room categories, spa treatments, fine dining, and booking facilities.Visual Appeal: Used high-quality imagery and refined typography to reflect the brand’s upscale identity.",
-    link: "#",
+    link: "https://hotelresorts.netlify.app/",
   },
   9: {
     title: "Dentist Website Landing Design",
@@ -302,6 +302,7 @@ function forceDownload() {
       showMessage("Download failed! Please try again.", "error");
     });
 }
+
 
 
 
