@@ -88,6 +88,7 @@
           <li><span data-aos="fade-up">Freelancer</span></li> -->
 
             <li><span data-aos="fade-up">web designer & developer</span></li>
+            <li><span data-aos="fade-up">professional coder</span></li>
             <li><span data-aos="fade-up">Creater & Freelancer</span></li>
           </ul>
         </div>
@@ -104,7 +105,7 @@
     <!-- about section starts  -->
 
     <section class="about" id="about">
-      <h1 class="heading" data-aos="fade-up"><span>About Me</span></h1>
+      <h1 class="heading" data-aos="fade-up"><span>biography</span></h1>
 
       <div class="biography">
         <p data-aos="fade-up">
@@ -125,6 +126,8 @@
           for complex challenges while maintaining clean, optimized code. I
           enjoy the constant change in the technologies used in the area and
           love diving into new frameworks and technologies. -->
+
+          
           Full Stack Developer with 1+ years of experience gained through
           internships and ongoing roles, skilled in building scalable web
           applications using PHP, Laravel, CodeIgniter, and MySQL. Proficient in
@@ -594,7 +597,7 @@
             </div>
           </div>
 
-          <div class="box" data-aos="zoom-in" onclick="openModal(14)">
+           <div class="box" data-aos="zoom-in" onclick="openModal(14)">
             <img
               src="images/kglc_pic.png"
               alt="Kohler Elite Konnect – Website"
@@ -640,7 +643,7 @@
           </div>
 
           <div class="box" data-aos="zoom-in" onclick="openModal(12)">
-            <img src="images/baba_pota.jpg" alt="Reductive Design" />
+            <img src="https://suhail-portfolio-site.vercel.app/images/baba_pota.jpg" alt="Reductive Design" />
             <div class="box-content">
               <h1>Baba Pota – Loyalty Program</h1>
               <span>configuration</span>
@@ -648,7 +651,7 @@
           </div>
 
           <div class="box" data-aos="zoom-in" onclick="openModal(13)">
-            <img src="images/sandoz.jpg" alt="Reductive Design" />
+            <img src="https://suhail-portfolio-site.vercel.app/images/sandoz.jpg" alt="Reductive Design" />
             <div class="box-content">
               <h1>Sandoz – Loyalty Program</h1>
               <span>configuration</span>
@@ -740,7 +743,7 @@
               <i class="fas fa-briefcase"></i>
               <span>Nov 2024 – Present</span>
               <h3>Full Stack Developer (Internship + Ongoing Role)</h3>
-              <p><strong>Vritto Technologies, Noida</strong></p>
+              <p><strong class="vritto">Vritto Technologies, Noida</strong></p>
               <p>
                 • Developed and maintained SaaS-based loyalty web modules for
                 leading brands like Reckitt, kek & kglc, Cafe Unbound, and Dabur
@@ -769,7 +772,7 @@
               <i class="fas fa-briefcase"></i>
               <span>Jun 2024 – July 2024</span>
               <h3>PHP Full Stack Developer Intern</h3>
-              <p><strong>SO Infotech, Noida</strong></p>
+              <p><strong class="vritto">SO Infotech, Noida</strong></p>
               <p>
                 • Successfully led multiple web projects that improved client
                 satisfaction and delivered seamless user experiences using HTML,
@@ -807,7 +810,11 @@
           <div class="box-container">
             <h3 class="title" data-aos="fade-right">education</h3>
 
-      
+            <div class="box" data-aos="fade-right">
+              <span>( 2024 )</span>
+              <h3>PHP Full Stack Developer</h3>
+              <p>Ducat Education</p>
+            </div>
 
             <div class="box" data-aos="fade-right">
               <span>( 2020 - 2023 )</span>
@@ -854,13 +861,6 @@
               <h3>Git Certification</h3>
               <p>Simplilearn</p>
             </div>
-
-               <div class="box" data-aos="fade-left">
-              <!-- <span>( 2022 - 2023 )</span> -->
-              <h3>Power BI Certification</h3>
-              <p>Skill Course</p>
-            </div>
-            
           </div>
         </div>
       </div>
@@ -1018,7 +1018,7 @@
             <input type="submit" value="send message" name="send" class="btn" />
           </form> -->
 
-          <form action="/server" method="post">
+          <!-- <form action="/server" method="post">
             <div class="flex">
               <input
                 type="text"
@@ -1052,10 +1052,22 @@
               rows="10"
             ></textarea>
             <input type="submit" value="send message" class="btn" />
-          </form>
+          </form> -->
+        
+          <form action="/script.js" method="POST">
+    <div class="flex">
+      <input type="text" name="name" placeholder="enter your name" class="box" required />
+      <input type="email" name="email" placeholder="enter your email" class="box" required />
+    </div>
+    <input type="number" min="0" name="number" placeholder="enter your number" class="box" required />
+    <textarea name="message" class="box" required placeholder="enter your message" cols="30" rows="10"></textarea>
+    <input type="submit" value="send message" class="btn" />
+  </form>
         </div>
       </div>
     </section>
+
+    
 
     <!-- contact section ends -->
     <div
@@ -1068,6 +1080,9 @@
         style="height: 90px; width: 90px"
       />
 
+
+      
+
       <span>
         <span style="color: white"
           >© copyright @
@@ -1076,6 +1091,15 @@
         </span>
       </span>
     </div>
+
+    <div class="bg-3d-lines">
+  <div class="container-3d">
+    <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+    <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+    <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+  </div>
+</div>
+
 
     <!-- custom js file link  -->
     <script src="script.js"></script>
@@ -1091,13 +1115,3 @@
     </script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
