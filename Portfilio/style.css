@@ -251,6 +251,7 @@ section {
   font-weight: lighter;
 }
 
+
 .about .skills {
   margin: 3rem 0;
 }
@@ -1339,11 +1340,23 @@ section {
   font-size: 15px;
 }
 
+
 .contact-img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 15px;
+  animation: updown 2s infinite ease-in-out;
 }
+
+@keyframes updown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+
+
+
 
 .social-icons a {
   display: inline-block;
@@ -1478,6 +1491,7 @@ body {
 }
 /* ================= DARK MODE SUPPORT ================= */
 
+
 /* Text color */
 body.dark-mode {
   background-color: #111;
@@ -1499,6 +1513,22 @@ body.dark-mode input[type="submit"].btn {
   color: #fff !important;
   background-color: transparent;
   border-color: #fff;
+}
+
+body.dark-mode .services .box-container .box {
+    padding: 3rem 2rem;
+    border: 0.2rem solid #fff;
+}
+
+body.dark-mode .home .image img {
+     height: 50rem;
+    padding: 2rem;
+    border: 0.2rem solid #fff;
+}
+
+body.dark-mode .heading span{
+    border-bottom: 0.4rem solid #fff;
+    
 }
 
 /* Hover effect */
@@ -1550,6 +1580,10 @@ body.dark-mode .skill-details p {
 /* Strong text dark mode me white */
 body.dark-mode strong {
   color: #fff !important;
+}
+
+body.dark-mode .vritto{
+  color: #000 !important;
 }
 
 /* Email link dark mode me white */
