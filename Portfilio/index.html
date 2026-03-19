@@ -35,6 +35,8 @@
     <!-- <link rel="stylesheet" href="index.php" /> -->
   </head>
   <body>
+
+    
     <!-- header section starts  -->
 
     <header class="header">
@@ -167,7 +169,7 @@
           download="images/Suhail_Resume_Web_Dev.docx"
           id="downloadBtn"
         >
-          <span class="download-icon"></span>
+          <span class="download-icon">📥</span>
           Download CV
         </a>
 
@@ -707,6 +709,15 @@
               <span>Design</span>
             </div>
           </div>
+
+           <div class="box" data-aos="zoom-in" onclick="openModal(15)">
+            <img src="images/homepage.png" alt="GlobalAssets HomePage" />
+            <div class="box-content"> 
+              <h1>GlobalAssets HomePage</h1>
+              <span>Design</span>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -739,30 +750,28 @@
 
         <div class="row">
           <div class="box-container">
-
-<div class="box" data-aos="fade-right">
+          <div class="box" data-aos="fade-right">
               <i class="fas fa-briefcase"></i>
               <span>Dec 2025 – Present</span>
-              <h3>PHP Full Stack Developer</h3>
-              <p><strong class="vritto">SPARKBURST TECHNO SOLUTIONS PRIVATE LIMITED, Noida</strong></p>
+              <h3>Jr PHP Developer </h3>
+              <p><strong class="vritto">Sparkburst Techno Solution Pvt Ltd, Noida</strong></p>
               <p>
-                • Worked on Sikanderpe Panel, contributing to admin-side feature development and system enhancements. <br />
-                • Designed and implemented Role-Based Access Control (RBAC) where Super Admin defines permissions
-accessible to Sub Admin users at login. <br />
-                • Controlled menu, page, and module access dynamically based on user roles. <br />
-                • Built a Sales Panel with role-based and hierarchy-based data visibility for Retailers and Sales users. <br />
-                • Ensured data security and isolation through backend validations and role-based filtering. <br />
+                • Worked on Sikanderpe Panel, a FinTech admin and sales management system. <br />
+                • Implemented Role-Based Access Control (RBAC) with secure backend validations. <br />
+                • Developed role-based dashboards and reports using React.js. <br />
+                • Built Node.js + Express.js APIs for sales tracking and hierarchy-based access.
+                    <br />
+                • Used MongoDB for storing sales logs, user activity data, and reporting collections. <br />
+                • Ensured secure data isolation and backend-level role filtering. <br />
                
               </p>
             </div>
-
-
             
             <div class="box" data-aos="fade-right">
               <i class="fas fa-briefcase"></i>
-              <span>Nov 2024 – Sep 2025</span>
-              <h3>Laravel Developer</h3>
-              <p><strong class="vritto">Vritto Technologies Pvt Ltd, Noida</strong></p>
+              <span>Nov 2024 – Dec 2025</span>
+              <h3>Node js  Developer </h3>
+              <p><strong class="vritto">Vritto Technologies, Noida</strong></p>
               <p>
                 • Developed and maintained SaaS-based loyalty web modules for
                 leading brands like Reckitt, kek & kglc, Cafe Unbound, and Dabur
@@ -828,7 +837,13 @@ accessible to Sub Admin users at login. <br />
         <div class="row">
           <div class="box-container">
             <h3 class="title" data-aos="fade-right">education</h3>
-            
+
+            <div class="box" data-aos="fade-right">
+              <span>( 2024 )</span>
+              <h3>PHP Full Stack Developer</h3>
+              <p>Ducat Education</p>
+            </div>
+
             <div class="box" data-aos="fade-right">
               <span>( 2020 - 2023 )</span>
               <h3>Bachelor Of Computer Application (BCA)</h3>
@@ -874,13 +889,6 @@ accessible to Sub Admin users at login. <br />
               <h3>Git Certification</h3>
               <p>Simplilearn</p>
             </div>
-
-            <div class="box" data-aos="fade-left">
-              <!-- <span>( 2022 - 2023 )</span> -->
-              <h3>PowerBI Certification</h3>
-              <p>Skill Course</p>
-            </div>
-            
           </div>
         </div>
       </div>
@@ -1094,20 +1102,20 @@ accessible to Sub Admin users at login. <br />
       class="credit"
       style="display: flex; align-items: center; justify-content: center"
     >
-      <!-- <img
+      <img
         src="images/logo-footer.png"
         alt="logo1"
         style="height: 90px; width: 90px"
-      /> -->
+      />
 
 
       
 
       <span>
         <span style="color: white"
-          >© 2026
+          >© copyright @
           <?php echo date('Y'); ?>
-          by <span> Mr. Suhail Akhtar. All rights reserved. </span>
+          by <span> mr. suhail akhtar </span>
         </span>
       </span>
     </div>
@@ -1135,8 +1143,3 @@ accessible to Sub Admin users at login. <br />
     </script>
   </body>
 </html>
-
-
-
-
-
