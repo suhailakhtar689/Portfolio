@@ -48,7 +48,7 @@ const projectData = {
       "Kohler Elite Konnect – Website Recovery,  HTML Email & API Integration",
     image: "images/Screenshot-2025.png",
     description:
-      "Resolved critical crash issues, restoring website uptime and performance. Created custom responsive HTML emailers for client communication and newsletters. Integrated third-party APIs to automate form submissions and lead capture. Optimized backend code for smoother performance and faster page loads. Supported marketing and sales teams by delivering fast fixes and automation.",
+      "Developed a points-based loyalty and redemption platform for the Kohler Gracious living Club (KGLC). This project involved a complete website recovery and strategic integration of an API to manage the core functionalities of the program: member points, rewards, and the redemption process. I also created a series of automated HTML emailers to keep users informed about their point balances and new offers. The final product was a seamless, secure, and fully automated digital solution that enhanced user engagement and drove customer loyalty.",
     link: "https://kohlerelitekonnect.com",
   },
   2: {
@@ -98,7 +98,7 @@ const projectData = {
     image: "images/Screenshot-1.png",
     description:
       "Crafted an elegant and user-friendly landing page for a luxury Hotel & Resort, ensuring a premium look and seamless browsing experience.Responsive Design: Optimized for flawless viewing on desktop, tablet, and mobile devices.Dynamic Services Section: Highlighted key offerings such as room categories, spa treatments, fine dining, and booking facilities.Visual Appeal: Used high-quality imagery and refined typography to reflect the brand’s upscale identity.",
-    link: "https://hotelresorts.netlify.app/",
+    link: "#",
   },
   9: {
     title: "Dentist Website Landing Design",
@@ -112,38 +112,44 @@ const projectData = {
     image: "images/Screenshot-2.png",
     description:
       "Designed an engaging, user-focused landing page for a tour and travel agency, crafted to inspire wanderlust while simplifying trip planning.Goal: Combine aesthetic appeal with functional design to attract travelers and increase conversions.Responsive Design: Optimized for seamless browsing on desktop, tablet, and mobile devices.Key Highlights: High-quality travel imagery, interactive trip options, and clear booking CTAs.",
-    link: "https://tour-travel-xi-ten.vercel.app/",
+    link: "#",
   },
-    11: {
+  11: {
     title: "Ship & Loaves – Loyalty Program",
     image: "images/Screenshot-2.png",
     description:
       "Developed a comprehensive loyalty program for Ship & Loaves, aimed at enhancing customer retention and engagement. Key Features: Points-based rewards system, personalized offers, and seamless integration with existing platforms. User Experience: Designed intuitive interfaces for both customers and administrators, ensuring ease of use and accessibility.Automated points tracking & redemption system.Real-time calculation of points based on bill amount and time slot.Admin dashboard for managing offers, tracking customers, and generating reports.Integrated email/SMS notifications for registration, earned points, and redemption.",
     link: "https://sipandloaves.vritto.com/SALC85TD/controlpanel/",
   },
-   12: {
+  12: {
     title: "Baba Pota – Loyalty Program",
-    image: "images/baba_pota.jpg",
+    image: "https://suhail-portfolio-site.vercel.app/images/baba_pota.jpg",
     description:
-"Onboarding Registration Link for new customers with instant bonus points on signup. Points Allocation System based on bill value and time slots (Normal Hours & Happy Hours). Redemption Rules allowing customers to redeem points on eligible bills.Integrated email/SMS notifications for registration, earned points, and redemption. Admin Dashboard for managing offers, tracking customer activity, and generating reports.",
+      "Onboarding Registration Link for new customers with instant bonus points on signup. Points Allocation System based on bill value and time slots (Normal Hours & Happy Hours). Redemption Rules allowing customers to redeem points on eligible bills.Integrated email/SMS notifications for registration, earned points, and redemption. Admin Dashboard for managing offers, tracking customer activity, and generating reports.",
     link: "http://babapota.vritto.com/BP3HVOGY/controlpanel",
   },
-     13: {
+  13: {
     title: "Sandoz – Loyalty Program",
-    image: "images/sandoz.jpg",
-    description: 
-        "Built a loyalty management system for Sandoz to increase customer retention and engagement. The program was customized to client requirements, offering seamless onboarding, reward points allocation, and redemption processes.",
+    image: "https://suhail-portfolio-site.vercel.app/images/sandoz.jpg",
+    description:
+      "Built a loyalty management system for Sandoz to increase customer retention and engagement. The program was customized to client requirements, offering seamless onboarding, reward points allocation, and redemption processes. Key Features: User-friendly registration process with instant bonus points.Points allocation based on bill amounts and specific time slots.Redemption options for eligible bills.Admin dashboard for managing offers, tracking customer activity, and generating reports.Email/SMS notifications for user actions.",
     link: "https://sandoz.vritto.com/SRUFAV9D/controlpanel/",
   },
-
-    14: {
+  14: {
     title: "Kohler Gracious living Club – A Complete Loyalty Program Solution",
     image: "images/kglc_pic.png",
     description:
       "Developed and rebuilt a comprehensive loyalty program website for the Kohler Gracious living Club. This project involved transitioning the existing website to a robust CMS-based platform for seamless content management. To power the core loyalty functionalities—such as user points and rewards—we successfully integrated a powerful API. Additionally, we designed and developed attractive, customized HTML email templates to keep users informed and engaged. The project successfully delivered a fully functional and manageable digital solution that enhanced user engagement and brand loyalty.",
     link: "https://sa.kohlergraciouslivingclub.com/KGSA5MF1/page/",
   },
-  
+
+   15: {
+    title: "GlobalAssets HomePage",
+    image: "images/homepage.png",
+    description:
+        "The Global Assiste homepage features a modern, clean, and user-friendly design that highlights the brand’s services and values. With clear navigation, an engaging hero section, and strong call-to-action elements, the layout ensures a smooth user experience and works seamlessly across desktop, tablet, and mobile devices.",
+    link: "https://global-assist-homepage-eor5.vercel.app/",
+  },
 };
 
 function openModal(projectId) {
@@ -302,6 +308,72 @@ function forceDownload() {
       showMessage("Download failed! Please try again.", "error");
     });
 }
+
+
+
+const express = require('express');
+const mysql = require('mysql2');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+require('dotenv').config(); // Load environment variables
+
+const app = express();
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// Serve HTML + CSS
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+});
+
+// MySQL connection using environment variables
+const db = mysql.createConnection({
+  host: process.env.DB_HOST || 'localhost',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || '', 
+  database: process.env.DB_NAME || 'portfolio-php'
+});
+
+db.connect((err) => {
+  if (err) {
+    console.error('DB connection failed:', err);
+    return;
+  }
+  console.log('Connected to MySQL database');
+});
+
+// POST route for form submission
+app.post('/script.js', (req, res) => {
+  const { name, email, number, message } = req.body;
+
+  const query = 'INSERT INTO messages (name, email, number, message) VALUES (?, ?, ?, ?)';
+  db.query(query, [name, email, number, message], (err, result) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Database error');
+    }
+    res.send('Form submitted successfully!');
+  });
+});
+
+// Start server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
