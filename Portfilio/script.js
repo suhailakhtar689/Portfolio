@@ -202,8 +202,10 @@ document
 const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
 
-// Check saved theme in localStorage
-if (localStorage.getItem("theme") === "dark") {
+// Default to dark theme on first visit, otherwise respect saved choice
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme !== "light") {
   body.classList.add("dark-mode");
   toggleBtn.innerHTML = '<i class="fas fa-sun"></i>'; // Light mode icon
 } else {
@@ -229,18 +231,25 @@ AOS.init({
 });
 
 // Download button click handler
-document.getElementById("downloadBtn").addEventListener("click", function (e) {
+const downloadBtn = document.getElementById("downloadBtn");
+const previewBtn = document.getElementById("previewBtn");
+
+if (downloadBtn) {
+  downloadBtn.addEventListener("click", function () {
   // Let the browser handle the download naturally
   showMessage("Resume download started! 📄", "success");
 
   // Optional: Track download event
   console.log("Resume download initiated");
-});
+  });
+}
 
 // Preview button click handler
-document.getElementById("previewBtn").addEventListener("click", function (e) {
+if (previewBtn) {
+  previewBtn.addEventListener("click", function (e) {
   showMessage("Opening resume preview... 👀", "success");
-});
+  });
+}
 
 // Function to show status messages
 function showMessage(message, type) {
@@ -257,7 +266,7 @@ function showMessage(message, type) {
 
 // Optional: Check if file exists (for debugging)
 function checkFileExists() {
-  fetch("images/resume.pdf", { method: "HEAD" })
+  fetch("images/Suhail_Resume_Web_Dev.docx", { method: "HEAD" })
     .then((response) => {
       if (response.ok) {
         console.log("✅ Resume file found");
@@ -275,7 +284,7 @@ function checkFileExists() {
 function enhancedDownload() {
   const link = document.createElement("a");
   link.href = "images/Suhail_Resume_Web_Dev.docx";
-  link.download = "My_Resume.pdf";
+  link.download = "Suhail_Resume_Web_Dev.docx";
   link.style.display = "none";
 
   document.body.appendChild(link);
@@ -287,7 +296,7 @@ function enhancedDownload() {
 
 // Alternative method if needed
 function forceDownload() {
-  fetch("images/resume.pdf")
+  fetch("images/Suhail_Resume_Web_Dev.docx")
     .then((response) => {
       if (!response.ok) {
         throw new Error("File not found");
@@ -298,7 +307,7 @@ function forceDownload() {
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = "Resume.pdf";
+      link.download = "Suhail_Resume_Web_Dev.docx";
       link.click();
       window.URL.revokeObjectURL(url);
       showMessage("Resume downloaded successfully! ✅", "success");
@@ -311,6 +320,7 @@ function forceDownload() {
 
 
 
+if (typeof window === "undefined") {
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
@@ -362,6 +372,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+}
 
 
 
