@@ -214,7 +214,7 @@ section {
   display: inline-block;
   padding: 1rem 2rem;
   background-color: var(--yellow);
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   margin: 1rem 0;
 }
 
@@ -2075,7 +2075,7 @@ section {
 .hero-highlight strong {
   display: block;
   font-family: var(--font-display);
-  font-size: clamp(3rem, 4vw, 4rem);
+  font-size: clamp(3rem, 4vw, 1rem);
   line-height: 1;
   margin-bottom: 0;
   color: var(--heading-color);
