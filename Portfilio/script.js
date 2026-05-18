@@ -266,7 +266,7 @@ function showMessage(message, type) {
 
 // Optional: Check if file exists (for debugging)
 function checkFileExists() {
-  fetch("images/Suhail_Resume_Web_Dev.docx", { method: "HEAD" })
+  fetch("images/Suhail_Resume.pdf", { method: "HEAD" })
     .then((response) => {
       if (response.ok) {
         console.log("✅ Resume file found");
@@ -283,8 +283,8 @@ function checkFileExists() {
 // Enhanced download with fallback
 function enhancedDownload() {
   const link = document.createElement("a");
-  link.href = "images/Suhail_Resume_Web_Dev.docx";
-  link.download = "Suhail_Resume_Web_Dev.docx";
+  link.href = "images/Suhail_Resume.pdf";
+  link.download = "Suhail_Resume.pdf";
   link.style.display = "none";
 
   document.body.appendChild(link);
@@ -296,7 +296,7 @@ function enhancedDownload() {
 
 // Alternative method if needed
 function forceDownload() {
-  fetch("images/Suhail_Resume_Web_Dev.docx")
+  fetch("images/Suhail_Resume.pdf")
     .then((response) => {
       if (!response.ok) {
         throw new Error("File not found");
@@ -307,7 +307,7 @@ function forceDownload() {
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = "Suhail_Resume_Web_Dev.docx";
+      link.download = "Suhail_Resume.pdf";
       link.click();
       window.URL.revokeObjectURL(url);
       showMessage("Resume downloaded successfully! ✅", "success");
