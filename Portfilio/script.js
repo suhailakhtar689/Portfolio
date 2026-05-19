@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         contactForm.reset();
         
         Swal.fire({
-          title: "✅ Message Sent Successfully!",
+          title: " Message Sent Successfully!",
           html: '<p style="font-size: 18px; color: #666; margin: 20px 0;">Thank you for reaching out! I will get back to you as soon as possible.</p>',
           icon: "success",
           confirmButtonColor: "#ffcc0d",
