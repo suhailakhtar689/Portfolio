@@ -39,6 +39,109 @@ document.addEventListener("DOMContentLoaded", function () {
     let fill = bar.querySelector(".progress-fill");
     fill.style.width = percentText + "%";
   });
+
+  // Contact Form Handler with Professional SweetAlert
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.querySelector('input[name="name"]').value;
+      const email = document.querySelector('input[name="email"]').value;
+      const number = document.querySelector('input[name="number"]').value;
+      const message = document.querySelector('textarea[name="message"]').value;
+
+      // Show success message with professional SweetAlert
+      Swal.fire({
+        title: "📧 Message Preview",
+        html: `<div style="text-align: left; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+          <p style="margin: 12px 0; font-size: 18px; color: #333;"><strong style="color: #000;">Name:</strong> <span style="color: #555;">${name}</span></p>
+          <p style="margin: 12px 0; font-size: 18px; color: #333;"><strong style="color: #000;">Email:</strong> <span style="color: #555;">${email}</span></p>
+          <p style="margin: 12px 0; font-size: 18px; color: #333;"><strong style="color: #000;">Phone:</strong> <span style="color: #555;">${number}</span></p>
+          <p style="margin: 12px 0; font-size: 18px; color: #333;"><strong style="color: #000;">Message:</strong></p>
+          <p style="margin: 12px 0; font-size: 16px; color: #666; padding: 12px; background: #fff; border-left: 4px solid #ffcc0d; border-radius: 4px;">${message}</p>
+        </div>`,
+        icon: "info",
+        confirmButtonText: "✓ Send Message",
+        cancelButtonText: "Cancel",
+        showCancelButton: true,
+        confirmButtonColor: "#ffcc0d",
+        cancelButtonColor: "#6c757d",
+        width: "600px",
+        customClass: {
+          title: "swal2-title-custom",
+          confirmButton: "swal2-confirm-custom",
+          cancelButton: "swal2-cancel-custom"
+        },
+        didOpen: () => {
+          const title = document.querySelector(".swal2-title");
+          title.style.fontSize = "28px";
+          title.style.fontWeight = "700";
+          title.style.color = "#000";
+          
+          const confirmBtn = document.querySelector(".swal2-confirm");
+          confirmBtn.style.fontSize = "16px";
+          confirmBtn.style.padding = "12px 32px";
+          confirmBtn.style.fontWeight = "600";
+          confirmBtn.style.borderRadius = "6px";
+          confirmBtn.style.color = "#000";
+          confirmBtn.style.boxShadow = "0 4px 12px rgba(255, 204, 13, 0.3)";
+          
+          const cancelBtn = document.querySelector(".swal2-cancel");
+          cancelBtn.style.fontSize = "16px";
+          cancelBtn.style.padding = "12px 32px";
+          cancelBtn.style.fontWeight = "600";
+          cancelBtn.style.borderRadius = "6px";
+        },
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Reset form after confirmation
+          contactForm.reset();
+          
+          // Show sending message
+          Swal.fire({
+            title: "⏳ Sending Your Message...",
+            html: '<p style="font-size: 18px; color: #666;">Please wait while we process your message</p>',
+            icon: "info",
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            width: "500px",
+            didOpen: () => {
+              Swal.showLoading();
+              const title = document.querySelector(".swal2-title");
+              title.style.fontSize = "26px";
+              title.style.color = "#000";
+            },
+          });
+
+          // Simulate sending (remove or replace with actual backend call)
+          setTimeout(() => {
+            Swal.fire({
+              title: "✅ Message Sent Successfully!",
+              html: '<p style="font-size: 18px; color: #666; margin: 20px 0;">Thank you for reaching out! I will get back to you as soon as possible.</p>',
+              icon: "success",
+              confirmButtonColor: "#ffcc0d",
+              confirmButtonText: "Great!",
+              width: "500px",
+              didOpen: () => {
+                const title = document.querySelector(".swal2-title");
+                title.style.fontSize = "26px";
+                title.style.fontWeight = "700";
+                title.style.color = "#000";
+                
+                const confirmBtn = document.querySelector(".swal2-confirm");
+                confirmBtn.style.fontSize = "16px";
+                confirmBtn.style.padding = "12px 32px";
+                confirmBtn.style.fontWeight = "600";
+                confirmBtn.style.borderRadius = "6px";
+                confirmBtn.style.color = "#000";
+              },
+            });
+          }, 2000);
+        }
+      });
+    });
+  }
 });
 
 // Project data with detailed information
@@ -354,17 +457,33 @@ db.connect((err) => {
 });
 
 // POST route for form submission
-app.post('/script.js', (req, res) => {
+app.post('/contact', (req, res) => {
+
   const { name, email, number, message } = req.body;
 
-  const query = 'INSERT INTO messages (name, email, number, message) VALUES (?, ?, ?, ?)';
+  const query = `
+    INSERT INTO messages (name, email, number, message)
+    VALUES (?, ?, ?, ?)
+  `;
+
   db.query(query, [name, email, number, message], (err, result) => {
+
     if (err) {
-      console.error(err);
-      return res.status(500).send('Database error');
+      console.log(err);
+
+      return res.status(500).json({
+        success: false,
+        message: "Database Error"
+      });
     }
-    res.send('Form submitted successfully!');
+
+    res.json({
+      success: true,
+      message: "Message Sent Successfully!"
+    });
+
   });
+
 });
 
 // Start server
