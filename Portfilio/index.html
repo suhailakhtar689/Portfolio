@@ -1126,15 +1126,41 @@
             <input type="submit" value="send message" class="btn" />
           </form> -->
         
-          <form action="/script.js" method="POST">
-    <div class="flex">
-      <input type="text" name="name" placeholder="enter your name" class="box" required />
-      <input type="email" name="email" placeholder="enter your email" class="box" required />
-    </div>
-    <input type="number" min="0" name="number" placeholder="enter your number" class="box" required />
-    <textarea name="message" class="box" required placeholder="enter your message" cols="30" rows="10"></textarea>
-    <input type="submit" value="send message" class="btn" />
-  </form>
+         <form action="/script.js" method="POST" id="contactForm">
+            <div class="flex">
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                class="box"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                class="box"
+                required
+              />
+            </div>
+            <input
+              type="number"
+              min="0"
+              name="number"
+              placeholder="Enter your number"
+              class="box"
+              required
+            />
+            <textarea
+              name="message"
+              class="box"
+              required
+              placeholder="Enter your message"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <input type="submit" value="send message" class="btn" />
+          </form>
         </div>
       </div>
     </section>
